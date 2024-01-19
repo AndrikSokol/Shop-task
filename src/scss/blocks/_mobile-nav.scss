@@ -1,0 +1,25 @@
+.mobile-nav {
+  background-color: var(--header-bg);
+  display: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 14px;
+
+  &_active {
+    display: block !important;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.mobile-nav__item {
+  padding: 10px 16px;
+
+  &:active,
+  &:hover {
+    background-color: #618cbf;
+    border-radius: 1px;
+  }
+}

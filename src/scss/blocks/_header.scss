@@ -1,0 +1,148 @@
+.header {
+  background-color: var(--header-bg);
+  color: var(--header-text-color);
+
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 86px;
+
+    @include tabletXL() {
+      gap: 41px;
+    }
+
+    @include tabletL() {
+      gap: 38px;
+    }
+
+    @include mobile() {
+      gap: 22px;
+    }
+  }
+
+  &__logo {
+    text-transform: uppercase;
+  }
+  &__input {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-bottom: 1px solid #517dae;
+
+    @include tabletXL() {
+      flex-grow: 1;
+    }
+
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &-top {
+    padding: 21px 0 16px 0;
+
+    @include tabletXL() {
+      padding: 18px 0;
+    }
+
+    @include mobile() {
+      padding: 21px 0 15px 0;
+    }
+  }
+
+  &__delivery {
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: var(--hover);
+    }
+
+    @include tabletXL() {
+      display: none;
+    }
+  }
+
+  &-bottom {
+    background-color: var(--header-nav-bg);
+    padding: 13px 0 12px 0;
+
+    @include tabletXL() {
+      display: none;
+    }
+  }
+
+  &__logo {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  &__contact {
+    font-size: 19px;
+    font-weight: 400;
+
+    @include tabletXL() {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    cursor: pointer;
+
+    svg:hover,
+    svg:active {
+      path {
+        fill: var(--hover);
+      }
+    }
+
+    @include tabletXL() {
+      display: block;
+    }
+  }
+  &__bucket {
+    display: none;
+    cursor: pointer;
+    @include tabletXL() {
+      display: block;
+    }
+    &-svg:hover,
+    &-svg:active {
+      path {
+        fill: var(--hover);
+      }
+    }
+  }
+  &__search {
+    display: none;
+    cursor: pointer;
+
+    &-svg:hover,
+    &-svg:active {
+      path {
+        fill: var(--hover);
+      }
+    }
+
+    @include mobile() {
+      display: block;
+      margin-right: 8px;
+    }
+  }
+}
+
+.mobile-search {
+  padding: 11px;
+  display: none;
+
+  background-color: var(--header-nav-bg);
+
+  &__link {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &_active {
+    display: block;
+  }
+}

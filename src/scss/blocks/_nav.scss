@@ -1,0 +1,15 @@
+.nav {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 39px;
+}
+.nav-list__item {
+  &:hover {
+    color: var(--hover);
+  }
+}

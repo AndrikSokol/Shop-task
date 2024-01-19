@@ -1,0 +1,160 @@
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  padding-top: 23px;
+  padding-bottom: 40px;
+
+  @include tabletXL() {
+    grid-template-columns: repeat(3, auto);
+    padding-top: 14px;
+  }
+
+  @include tabletL() {
+    grid-template-columns: repeat(2, auto);
+  }
+  @include mobile() {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 21px;
+  padding-bottom: 14px;
+  border: 1px solid var(--product-border);
+  &:hover {
+    border-color: var(--product-hover-border);
+    background-color: var(--product-bg);
+  }
+
+  &:first-child {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+
+    @include mobile() {
+      flex-direction: column;
+    }
+
+    .product-inner {
+      border-color: var(--product-first-separator);
+      position: relative;
+    }
+
+    .product__price {
+      color: var(--accent-active);
+    }
+    .product__price::before {
+      content: "4400,00 руб.";
+      position: absolute;
+      top: -26px;
+      color: var(--text-muted);
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: line-through;
+    }
+
+    .product__bucket {
+      color: var(--accent-active);
+      path {
+        fill: var(--accent-active);
+      }
+    }
+    .product-content__title {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .product-content__description {
+      font-size: 16px;
+      height: 232px;
+    }
+
+    .product__img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      @include tabletXL() {
+        width: 297px;
+        height: 297px;
+      }
+
+      @include tabletL() {
+        width: 318px;
+        height: 318px;
+      }
+
+      @include mobile() {
+        width: 244px;
+        height: 244px;
+      }
+    }
+
+    &:hover {
+      border-color: var(--accent-active);
+      background-color: var(--product-first-bg);
+    }
+  }
+}
+.product-content {
+  text-align: start;
+}
+.product__img {
+  align-self: center;
+  aspect-ratio: 1/1;
+  width: 160px;
+  height: 160px;
+
+  @include tabletXL() {
+    width: 164px;
+    height: 164px;
+  }
+
+  @include tabletL() {
+    width: 175px;
+    height: 175px;
+  }
+
+  @include mobile() {
+    width: 169px;
+    height: 169px;
+  }
+}
+
+.product-content__title {
+  padding: 6px 0 10px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+.product-content__description {
+  height: 72px;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.product-inner {
+  border-top: 1px solid var(--product-separator);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 21px;
+  padding: 21px 0 0 0;
+}
+.product__price {
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.product__bucket {
+  color: var(--accent);
+  path {
+    fill: var(--accent);
+  }
+}

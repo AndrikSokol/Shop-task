@@ -1,0 +1,37 @@
+:root {
+  --text-color: #333333;
+  --accent: #325ac0;
+  --accent-active: #ff3d3d;
+  --text-muted: #989898;
+  --hover: #fbff3d;
+
+  --header-text-color: #ffff;
+  --header-bg: #265c9a;
+  --header-nav-bg: #1f497b;
+
+  --product-bg: #e8eeff;
+  --product-first-bg: #fff1f1;
+  --product-border: #d0d0d0;
+  --product-separator: #8eacfc;
+  --product-first-separator: #ffbcbc;
+  --product-hover-border: #819deb;
+  --font-main: "PT Sans", sans-serif;
+}
+
+@mixin tabletXL() {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tabletL() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (min-width: 200px) and (max-width: 500px) {
+    @content;
+  }
+}

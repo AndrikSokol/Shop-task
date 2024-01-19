@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+html,
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+}
+
+.input {
+  background: transparent;
+  border: none;
+  color: var(--header-text-color);
+}
+::-webkit-input-placeholder {
+  color: var(--header-text-color);
+  font-size: 16px;
+}

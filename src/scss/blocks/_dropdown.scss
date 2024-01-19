@@ -1,0 +1,87 @@
+.dropdown {
+  display: flex;
+  position: relative;
+  width: 264px;
+  cursor: pointer;
+  gap: 14px;
+}
+.dropdown-wrapper {
+  border: 1px solid var(--product-border);
+  border-bottom: 0px;
+  display: flex;
+
+  padding: 13px 17px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdown__title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.dropdown__separator {
+  border-bottom: 1px solid var(--product-border);
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+
+  &_active {
+    right: 17px;
+    left: 17px;
+    bottom: 1px;
+  }
+}
+
+.list {
+  position: absolute;
+  width: 264px;
+  top: 48px;
+  left: 0px;
+  background-color: white;
+  border: 1px solid var(--product-border);
+  border-top: 0px;
+}
+.list__category {
+  padding-bottom: 7px;
+  padding-top: 3px;
+  display: none;
+
+  &_active {
+    display: block;
+  }
+}
+
+.list__brand {
+  padding-bottom: 7px;
+  padding-top: 3px;
+  display: none;
+  &_active {
+    display: block;
+  }
+}
+
+.list__option {
+  width: 100%;
+  padding: 10px 17px;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--product-bg);
+  }
+}
+
+@include tabletXL {
+  .dropdown {
+    width: 244px;
+  }
+  .dropdown__separator_active {
+    display: none;
+  }
+
+  .dropdown-wrapper {
+    padding: 13px 10px;
+  }
+}
